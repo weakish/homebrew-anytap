@@ -3,7 +3,7 @@ require 'formula'
 class BrewAltTap < Formula
   homepage 'https://github.com/telemachus/homebrew-alttap/'
   url 'git://github.com/telemachus/homebrew-alttap.git'
-  version '0.0.1'
+  version '0.0.2'
 
   skip_clean 'bin'
 

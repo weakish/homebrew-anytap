@@ -1,4 +1,6 @@
 # brew-alt-tap.rb
+# Copy-pasta makes me sad. So let's require 'cmd/tap'.
+require 'cmd/tap'
 
 usage = <<EOF
 SYNOPSIS
