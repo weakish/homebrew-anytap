@@ -12,8 +12,8 @@ USAGE
 EOF
 
 def raw_untap(args)
-  args.each do |tap|
-    tap.downcase!
+  args.each do |arg|
+    tap = arg.downcase
     tapd = HOMEBREW_LIBRARY/"Taps/#{tap}"
 
     unless tapd.directory?
