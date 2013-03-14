@@ -8,7 +8,42 @@ SYNOPSIS
     brew any-tap [-h|-?|--help] [name URL]
 
 USAGE
-    TODO: FIXME
+    brew any-tap -h|-?|--help
+      Called in any of these ways, any-tap will print this usage.
+    brew any-tap
+      Called without arguments, any-tap will show your currently tapped
+      repos.
+    brew any-tap name URL
+      Called this way, any-tap will attempt to clone any repository and tap
+      (i.e. symlink) all of the formulae in that repository.
+
+      In particular, any-tap will pass along the name and URL arguments to
+      git in this form:
+
+          git clone URL name
+
+      This means that you can clone any repository, using any protocol that
+      git can handle (http, git, ssh, filesystem clones).
+
+      That's the good news. The bad news is that unlinke `brew tap`, any-tap
+      does not do *any* special casing. It provides no short-cuts. If you
+      want to tap something from GitHub and you choose to use any-tap, you
+      must provide the full URL.
+
+      Thus, the following are equivalent:
+
+          brew tap user/repo
+          brew any-tap user-repo https://github.com/user/homebrew-repo
+
+      In such a case, `brew tap` seems obviously easier.
+
+      The advantage of any-tap is that `brew tap` cannot do any of the
+      following:
+
+        + Tap repos without 'homebrew-' in their name
+        + Tap repos that aren't on GitHub
+        + Tap repos with hyphens (other than 'homebrew-') in their name
+        + Tap repos using any protocol other than HTTP
 EOF
 
 def raw_install_tap(args)

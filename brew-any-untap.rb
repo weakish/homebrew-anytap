@@ -5,10 +5,21 @@ include Homebrew
 
 usage = <<EOF
 SYNOPSIS
-    brew alt-untap <tap>
+    brew any-untap [tap1 tap2 ...]
 
 USAGE
-    TODO: FIXME
+    brew any-untap
+      Called without arguments, alt-untap will show you all your currently
+      tapped repos.
+    brew any-untap tap-name [tap-name2 tap-name3 ...]
+      If you give any-untap the name of a tapped repo, it will attempt to
+      untap that repository. You should copy the name exactly as it appears
+      in the output of `brew any-untap`
+
+      any-untap can also handle multiple arguments. It will simply try to
+      remove each tapped repo, one after the other. If any name in the list
+      is not found, you will see a warning, but any-untap will continue with
+      the next name.
 EOF
 
 def raw_untap(args)
