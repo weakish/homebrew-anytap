@@ -28,6 +28,11 @@ command. I thank all the people who worked on that.
 
   That will install `brew any-tap` and `brew any-untap`. See below for
   brief usage notes on both.
++ If you prefer, however, you can simply clone this repository and then
+  copy `brew-any-tap.rb` and `brew-any-untap.rb` anywhere in your `$PATH`.
+
+  If you do that, `brew` will automatically be able to pick up the commands
+  and do the right thing with them.
 
 ## Usage
 
