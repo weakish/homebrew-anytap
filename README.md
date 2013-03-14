@@ -11,16 +11,46 @@ a replacement for the built-in [`brew tap`][bt] command. That command has
 certain limitations, but because of backwards compatibility, it's hard to
 update.
 
-This command is born of my desire for a souped-up version of brew tap. To
-that end, I have freely borrowed (ahem, stolen) code from the existing
-`brew tap` command. I thank all the people who worked on that command.
+This command scratches my itch. I wanted a souped-up version of `brew tap`.
+I have freely borrowed (ahem, stolen) code from the existing `brew tap`
+command. I thank all the people who worked on that.
 
 [ec]: https://github.com/mxcl/homebrew/wiki/External-Commands
 [brew]: https://github.com/mxcl/homebrew
 [bt]: https://github.com/mxcl/homebrew/wiki/brew-tap
 
+## Installation
+
++ The easiest thing is (ironically?) to use `brew tap`:
+
+        brew tap telemachus/anytap
+        brew install brew-anytap
+
+  That will install `brew any-tap` and `brew any-untap`. See below for
+  brief usage notes on both.
+
 ## Usage
 
++ `brew any-tap`
+    + `brew any-tap -h|-?|--help`: Get usage
+    + `brew any-tap`: List currently installed taps
+    + `brew any-tap name URL`: Tap the repo at URL as 'name'
++ `brew any-untap`
+    + `brew any-untap -h|-?|--help`: Get usage
+    + `brew any-untap`: List currently installed taps
+    + `brew any-untap name1 [name2 name3 ...]`: Untap one or more taps
++ The key difference between `brew tap` and `brew any-tap` is that `brew
+  any-tap` will attempt to tap *any* URL that you give it. You can tap
+  private repositories, things not on GitHub and things that have any
+  naming conventions.
+
+  The price you pay is that you must be more explicit. There's no
+  special-casing for GitHub. You always must provide the full URL of what
+  you want to tap. You always must provide the name you want the tap to
+  have on disc. `brew any-tap` will simply hand over these arguments and
+  try to run this command:
+
+        git clone URL name
 
 ## Contributors
 
