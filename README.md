@@ -1,5 +1,9 @@
 # alt-tap.rb: An alternative version of `brew tap`
 
+## WARNING ##
+
+**This is alpha software. Use it at your own risk. It is very alpha.**
+
 ## What is it?
 
 It's an [external command][ec] for [Homebrew][brew]. It is meant to be
