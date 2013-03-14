@@ -1,4 +1,4 @@
-# alt-tap.rb: An alternative version of `brew tap`
+# any-tap.rb: This one `brew tap`s anything you throw at it.
 
 ## WARNING ##
 
