@@ -5,14 +5,17 @@ include Homebrew
 
 usage = <<EOF
 SYNOPSIS
-    brew any-tap [-h|-?|--help] [name URL]
+    brew any-tap [-r|--repair] [-h|-?|--help] [name URL]
 
 USAGE
-    brew any-tap -h|-?|--help
-      Called in any of these ways, any-tap will print this usage.
     brew any-tap
       Called without arguments, any-tap will show your currently tapped
       repos.
+    brew any-tap -h|-?|--help
+      Called in any of these ways, any-tap will print this usage.
+    brew any-tap -r|--repair
+      Called with `-r` or `--repair`, any-tap will repair symlinks and prune
+      any orphaned symlinks from all current taps.
     brew any-tap name URL
       Called this way, any-tap will attempt to clone any repository and tap
       (i.e. symlink) all of the formulae in that repository.
@@ -44,6 +47,7 @@ USAGE
         + Tap repos that aren't on GitHub
         + Tap repos with hyphens (other than 'homebrew-') in their name
         + Tap repos using any protocol other than HTTP
+
 EOF
 
 def raw_install_tap(args)
@@ -74,6 +78,8 @@ if ARGV.size < 1
   end if tapd.directory?
 elsif ['-h', '-?', '--help'].include?(ARGV.first)
   puts usage
+elsif ['-r', '--repair'].include?(ARGV.first)
+  repair_taps
 else
   raw_install_tap(ARGV)
 end
