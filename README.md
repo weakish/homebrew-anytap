@@ -37,8 +37,9 @@ command. I thank all the people who worked on that.
 ## Usage
 
 + `brew any-tap`
-    + `brew any-tap -h|-?|--help`: Get usage
     + `brew any-tap`: List currently installed taps
+    + `brew any-tap -h|-?|--help`: Get usage
+    + `brew any-tap -r|--repair`: Check all symlinks and remove orphans
     + `brew any-tap name URL`: Tap the repo at URL as 'name'
 + `brew any-untap`
     + `brew any-untap -h|-?|--help`: Get usage
