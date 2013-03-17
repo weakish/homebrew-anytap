@@ -58,6 +58,19 @@ command. I thank all the people who worked on that.
 
         git clone URL name
 
+## Bash completion
+
+If you use Homebrew's Bash completion file, you may find the included diff
+file `brew_bash_completion.diff` useful. It does the following:
+
++ Adds awareness of the commands `any-tap` and `any-untap` to Bash
+  completion
++ Adds automatic completions for `brew any-untap [TAB]`. These will be
+  filled in with candidates from your installed taps.
+
+Apply the diff to the existing completions at
+`$(brew --repository)/Library/Contributions/brew_bash_completion.sh`.
+
 ## Contributors
 
 ### TODO Fill in contributors to the original `brew tap`?
