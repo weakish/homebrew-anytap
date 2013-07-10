@@ -1,9 +1,5 @@
 # any-tap.rb: This one `brew tap`s anything you throw at it.
 
-## WARNING ##
-
-**This is alpha software. Use it at your own risk. It is very alpha.**
-
 ## What is it?
 
 It's an [external command][ec] for [Homebrew][brew]. It is meant to be
@@ -73,8 +69,10 @@ Apply the diff to the existing completions at
 
 ## Contributors
 
-### TODO Fill in contributors to the original `brew tap`?
++ [Ivan Andrus](https://github.com/gvol)
++ [Mike English](https://github.com/englishm)
 
 ## Contributing
 
-### TODO Put some contribution guidelines here
+Fork, edit and pass me a pull request. Nothing more formal than that, but
+please do let me know *why* the change makes sense. Thanks.
