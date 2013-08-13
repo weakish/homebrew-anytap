@@ -1,12 +1,12 @@
 diff --git a/Library/Contributions/brew_bash_completion.sh b/Library/Contributions/brew_bash_completion.sh
-index f3c685d..fce18d4 100644
+index 22912ac..c763bfb 100644
 --- a/Library/Contributions/brew_bash_completion.sh
 +++ b/Library/Contributions/brew_bash_completion.sh
 @@ -93,6 +93,11 @@ __brew_complete_tapped ()
      __brewcomp "$(\ls $(brew --repository)/Library/Taps 2>/dev/null | sed 's/-/\//g')"
  }
  
-+__brew_complete_anytapped ()
++__brew_complete_anytapped()
 +{
 +    __brewcomp "$(\ls $(brew --repository)/Library/Taps 2>/dev/null)"
 +}
@@ -14,15 +14,15 @@ index f3c685d..fce18d4 100644
  _brew_complete_tap ()
  {
      local cur="${COMP_WORDS[COMP_CWORD]}"
-@@ -400,6 +405,8 @@ _brew ()
-         __brewcomp "
+@@ -401,6 +406,8 @@ _brew ()
              --cache --cellar --config
              --env --prefix --repository
+             audit
 +            any-tap
 +            any-untap
-             audit
              cat
              cleanup
+             create
 @@ -462,6 +469,7 @@ _brew ()
      tap)                        _brew_complete_tap ;;
      uninstall|remove|rm)        _brew_uninstall ;;
