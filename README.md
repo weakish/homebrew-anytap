@@ -1,10 +1,13 @@
 # any-tap.rb: This one `brew tap`s anything you throw at it.
 
-## NOTICE
+## NOTICE 2014-05-06
 
-**DO NOT INSTALL OR USE**: Homebrew recently changed how it stores taps
-internally. I will need to update `any-tap` to handle this. Until I do so,
-you shouldn't install or use it. (2014-05-06)
+Homebrew recently changed how it structures `Library/Taps`. As a result,
+you may have seen warnings when updating `brew`. The warning can sound
+scary, but the good news is that the fix is pretty simple. For details,
+please see [my comment here on a related issue][issue].
+
+[issue]: https://github.com/telemachus/homebrew-anytap/issues/3#issuecomment-42294369
 
 ## What is it?
 
