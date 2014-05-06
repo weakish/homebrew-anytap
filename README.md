@@ -1,5 +1,11 @@
 # any-tap.rb: This one `brew tap`s anything you throw at it.
 
+## NOTICE
+
+**DO NOT INSTALL OR USE**: Homebrew recently changed how it stores taps
+internally. I will need to update `any-tap` to handle this. Until I do so,
+you shouldn't install or use it. (2014-05-06)
+
 ## What is it?
 
 It's an [external command][ec] for [Homebrew][brew]. It is meant to be
