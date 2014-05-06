@@ -1,6 +1,6 @@
-# any-tap.rb: This one `brew tap`s anything you throw at it.
+## any-tap.rb: This one `brew tap`s anything you throw at it.
 
-## NOTICE 2014-05-06
+# NOTICE 2014-05-06
 
 Homebrew recently changed how it structures `Library/Taps`. As a result,
 you may have seen warnings when updating `brew`. The warning can sound
