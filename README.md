@@ -65,6 +65,7 @@ command. I thank all the people who worked on that.
 
 ## Contributors
 
++ [ipmcc](https://github.com/ipmcc)
 + [Ivan Andrus](https://github.com/gvol)
 + [Mike English](https://github.com/englishm)
 
