@@ -3,7 +3,7 @@ require 'formula'
 class BrewAnyTap < Formula
   homepage 'https://github.com/telemachus/homebrew-anytap/'
   url 'https://github.com/telemachus/homebrew-anytap.git'
-  version '0.0.7'
+  version '0.0.8'
 
   skip_clean 'bin'
 
