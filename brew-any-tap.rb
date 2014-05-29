@@ -23,7 +23,7 @@ USAGE
       In particular, any-tap will pass along the name and URL arguments to
       git in this form:
 
-          git clone URL name
+          git clone URL HOMEBREW_PREFIX/TAPS/user/homebrew-name
 
       This means that you can clone any repository, using any protocol that
       git can handle (http, git, ssh, filesystem clones).
@@ -36,7 +36,7 @@ USAGE
       Thus, the following are equivalent:
 
           brew tap user/repo
-          brew any-tap user-repo https://github.com/user/homebrew-repo
+          brew any-tap user repo https://github.com/user/homebrew-repo
 
       In such a case, `brew tap` seems obviously easier.
 
@@ -53,7 +53,7 @@ EOF
 def raw_install_tap(args)
   user, dir, url = args[0..2]
   # downcase to avoid case-insensitive filesystem problems
-  tapd = validate_name(user.downcase, dir.downcase)
+  tapd = normalize_name(user.downcase, dir.downcase)
 
   safe_system('git', 'clone', url, tapd)
   files = []
@@ -62,9 +62,10 @@ def raw_install_tap(args)
   puts "Tapped #{files.count} formula"
 end
 
-def validate_name(user, name)
+def normalize_name(user, name)
   raise "No slashes in tap users." if user =~ %r{/}
   raise "No slashes in tap names." if name =~ %r{/}
+  name = "homebrew-#{name}" unless name =~ /^homebrew-/
   tapd = HOMEBREW_LIBRARY/"Taps/#{user}/#{name}"
   if tapd.directory?
     raise "Choose another name: a tap #{name} already exists."
