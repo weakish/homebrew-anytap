@@ -92,6 +92,7 @@ compatible with the rest of `brew`.
 
 ## Contributors
 
++ [Changjian Gao](https://github.com/xiaogaozi)
 + [ipmcc](https://github.com/ipmcc)
 + [Ivan Andrus](https://github.com/gvol)
 + [Mike English](https://github.com/englishm)
