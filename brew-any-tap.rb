@@ -28,7 +28,7 @@ USAGE
       This means that you can clone any repository, using any protocol that
       git can handle (http, git, ssh, filesystem clones).
 
-      That's the good news. The bad news is that unlinke `brew tap`, any-tap
+      That's the good news. The bad news is that unlike `brew tap`, any-tap
       does not do *any* special casing. It provides no short-cuts. If you
       want to tap something from GitHub and you choose to use any-tap, you
       must provide the full URL.
