@@ -20,7 +20,7 @@ This command scratches my itch. I wanted a souped-up version of `brew tap`.
 I have freely borrowed (ahem, stolen) code from the existing `brew tap`
 command. I thank all the people who worked on that.
 
-[ec]: https://github.com/mxcl/homebrew/wiki/External-Commands
+[ec]: https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/External-Commands.md
 [brew]: https://github.com/mxcl/homebrew
 [bt]: https://github.com/mxcl/homebrew/wiki/brew-tap
 
